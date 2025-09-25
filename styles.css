@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'main';
+    src: url(./src/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'csm';
+    src: url(./src/fonts/comic.ttf);
+}
+
+* {
+    font-family: 'main';
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@keyframes rnb {
+    0% {color: red;}
+    33% {color: lime;}
+    66% {color: blue;}
+    99% {color: red;}
+}
+
+#lol {
+    animation: 0.5s rnb infinite;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: max-content;
+    font-size: 32px;
+    font-family: 'csm';
+    font-weight: bolder;
+    transition: transform 200ms ease-out;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+    box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 100ms ease-out;
+
+    &:active {
+        background-color: black;
+        color: white;
+    }
+}
